@@ -1,2 +1,3 @@
-![Pylint Badge](https://github.com/yourusername/flask-calculator/actions/workflows/lint.yml/badge.svg)
+![Pylint Badge](https://github.com/bozkaISSI/flask-calculator/actions/workflows/pylint.yml/badge.svg)
+
 
