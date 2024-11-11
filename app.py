@@ -10,28 +10,28 @@ app = Flask(__name__)
 @app.route('/calculate')
 def calculate():
     """
-    Endpoint that performs basic arithmetic operations based on the 'op' parameter.
+    Endpoint that performs basic arithmetic operations based on the 'operation' parameter.
     Supported operations: sum, subtract, multiply, divide.
 
     Arguments:
-    - op: The operation to perform ('sum', 'subtract', 'multiply', 'divide')
+    - operation: The operation to perform ('sum', 'subtract', 'multiply', 'divide')
     - arg1: The first number (integer)
     - arg2: The second number (integer)
 
     Returns:
     - The result of the operation or an error message if the operation is invalid.
     """
-    op = request.args.get('op', type=str)
+    operation = request.args.get('operation', type=str)
     arg1 = request.args.get('arg1', type=int)
     arg2 = request.args.get('arg2', type=int)
 
-    if op == 'sum':
+    if operation == 'sum':
         result = arg1 + arg2
-    elif op == 'subtract':
+    elif operation == 'subtract':
         result = arg1 - arg2
-    elif op == 'multiply':
+    elif operation == 'multiply':
         result = arg1 * arg2
-    elif op == 'divide' and arg2 != 0:
+    elif operation == 'divide' and arg2 != 0:
         result = arg1 / arg2
     else:
         result = 'Invalid operation or division by zero'
